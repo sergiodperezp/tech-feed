@@ -1,0 +1,92 @@
+// media queries
+$phone: 375px;
+$smartphone: 401px;
+$phablet: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+@mixin small-phone {
+  @media screen and (max-width: #{$phone - 1px}) {
+    @content;
+  }
+}
+@mixin phone-min {
+  @media screen and (min-width: #{$phone}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media screen and (min-width: #{$phone}) and (max-width: #{$smartphone - 1px}) {
+    @content;
+  }
+}
+@mixin phone-max {
+  @media screen and (max-width: #{$smartphone - 1px}) {
+    @content;
+  }
+}
+@mixin smartphone-min {
+  @media screen and (min-width: #{$smartphone}) {
+    @content;
+  }
+}
+@mixin smartphone {
+  @media screen and (min-width: #{$smartphone}) and (max-width: #{$phablet - 1px}) {
+    @content;
+  }
+}
+@mixin smartphone-max {
+  @media screen and (max-width: #{$phablet - 1px}) {
+    @content;
+  }
+}
+@mixin phablet-min {
+  @media screen and (min-width: #{$phablet}) {
+    @content;
+  }
+}
+@mixin phablet {
+  @media screen and (min-width: #{$phablet}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+@mixin phablet-max {
+  @media screen and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-min {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) and (max-width: #{$laptop - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-max {
+  @media screen and (max-width: #{$laptop - 1px}) {
+    @content;
+  }
+}
+@mixin laptop-min {
+  @media screen and (min-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (min-width: #{$laptop}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+@mixin laptop-max {
+  @media screen and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+@mixin desktop-min {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}

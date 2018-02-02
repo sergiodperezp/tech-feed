@@ -1,0 +1,47 @@
+.content {
+  padding: 0 24px; }
+
+.navbar .navbar-header {
+  padding-left: 24px; }
+
+.navbar .navbar-title {
+  font-family: "Montserrat", sans-serif; }
+
+.tech-feed {
+  display: grid;
+  grid-row-gap: 24px; }
+  @media screen and (min-width: 768px) {
+    .tech-feed {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 48px;
+      grid-row-gap: 48px; } }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .tech-feed {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media screen and (min-width: 1200px) {
+    .tech-feed {
+      grid-template-columns: repeat(4, 1fr); } }
+
+.card {
+  display: block; }
+  .card .card-inner {
+    position: relative;
+    padding: 12px 12px 34px 12px;
+    text-align: center; }
+    .card .card-inner .title {
+      color: #404040;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      padding: 0 0 6px 0; }
+    .card .card-inner .description {
+      color: #808080;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      padding: 0 0 6px 0; }
+    .card .card-inner .source-name {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      color: #808080;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px; }

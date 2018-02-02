@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Tech Feed | Techonology News Feed</title>
+  <!-- web app -->
+  <meta name="description" content="Technology News Feed from News API">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Tech Feed">
+  <meta name="apple-mobile-web-app-title" content="Tech Feed">
+  <!-- web app icons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="./assets/icons/icon-48.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="./assets/icons/icon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/icon-96.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="./assets/icons/icon-96.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="./assets/icons/icon-144.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="./assets/icons/icon-144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="240x240" href="./assets/icons/icon-240.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="240x240" href="./assets/icons/icon-240.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/icon-512.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/icons/icon-512.png">
+  <!-- web app theme -->
+  <meta name="theme-color" content="#1955c3">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-navbutton-color" content="#1955c3">
+  <meta name="msapplication-starturl" content="./">
+  <!-- facebook cards -->
+  <!-- twitter cards -->
+  <!-- json-ld -->
+  <!-- styles -->
+  <!-- basic -->
+  <link href="./assets/css/basic.min.css" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Lato:300" rel="stylesheet">
+  <!-- icons -->
+  <!-- inline css -->
+  <!-- custom css -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <!-- plugins -->
+  <!-- favicon -->
+  <link href="./favicon.ico" rel="icon">
+  <!-- scripts -->
+  <!-- google analytics -->
+  <!-- google analytics -->
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-top">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- nav -->
+          <div class="nav">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+              <!-- navbar-brand -->
+              <a href="./" class="navbar-brand">
+                <!-- navbar-image -->
+                <!-- navbar-image -->
+                <!-- navbar-title -->
+                <h1 class="navbar-title">Tech Feed</h1>
+                <!-- navbar-title -->
+              </a>
+              <!-- navbar-brand -->
+              <!-- navbar-icon -->
+              <svg height="24" width="24" class="navbar-icon navbar-open hidden">
+                <path d="M 0,6 24,6" stroke="#1969cd" stroke-width="2" class="path-one"/>
+                <path d="M 0,12 24,12" stroke="#1969cd" stroke-width="2" class="path-two"/>
+                <path d="M 0,18 24,18" stroke="#1969cd" stroke-width="2" class="path-three"/>
+              </svg>
+              <!-- navbar-icon -->
+            </div>
+            <!-- navbar-header -->
+            <!-- navbar-menu -->
+            <div id="navbar-menu">
+              <!-- menu-items -->
+              <!-- menu-items -->
+            </div>
+            <!-- navbar-menu -->
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </nav>
+    <!-- navbar -->
+  </header>
+  <!-- header -->
+
+  <!-- tech-feed -->
+  <section class="page" id="tech-feed">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <!-- content -->
+        <div class="content">
+          <!-- tech-feed -->
+          <div class="tech-feed"></div>
+          <!-- tech-feed -->
+        </div>
+        <!-- content -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </section>
+  <!-- tech-feed -->
+
+  <!-- scripts -->
+  <!-- service worker -->
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('./sw.js')
+      .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+      });
+    }
+  </script>
+  <!-- basic -->
+  <script src="./assets/js/basic.min.js"></script>
+  <!-- custom scripts -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
