@@ -10,7 +10,7 @@ const sources = [
   {"name": "The Verge", "source": "the-verge"},
   {"name": "Wired", "source": "wired"}
 ]
-const techFeed = document.querySelector('.tech-feed');
+const feedCards = document.querySelector('.feed-cards');
 
 let card = '';
 
@@ -24,7 +24,7 @@ for (let i in sources) {
   .then((response) => response.json())
   .then(function(data) {
 
-    const articles = data.articles;
+    let articles = data.articles;
 
     for (let j in articles) {
       let url = articles[j].url;
@@ -35,12 +35,12 @@ for (let i in sources) {
       let date = articles[j].publishedAt;
 
       card += `
-        <a href="${url}" target="_blank" class="card">
-          <div class="card-inner">
+        <div class="feed-card">
+          <a href="${url}" target="_blank" class="card-inner">
       `;
       if (image) {
         card += `
-          <img src="${image}" alt="${title}">
+          <img src="${image}" alt="${title}" class="image">
         `;
       }
       card += `
@@ -53,10 +53,21 @@ for (let i in sources) {
       }
       card += `
             <p class="source-name">${sourceName}</p>
-          </div>
-        </a>
+          </a>
+        </div>
       `;
     }
-    techFeed.innerHTML = card;
+    feedCards.innerHTML = card;
   })
 }
+
+// to the top
+const toTop =  document.querySelector('#to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 1000) {
+    toTop.classList.remove('hidden');
+  } else {
+    toTop.classList.add('hidden');
+  }
+});

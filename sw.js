@@ -24,7 +24,7 @@ const fileManifest = [
   },
   {
     "url": "assets/css/style.css",
-    "revision": "0c014df1c20be44c14c4348dc7310702"
+    "revision": "a7ab61e54d48779270d816f90a39d249"
   },
   {
     "url": "assets/icons/icon-144.png",
@@ -56,7 +56,7 @@ const fileManifest = [
   },
   {
     "url": "assets/js/script.js",
-    "revision": "1568917f370473fe8b599474d522f6cd"
+    "revision": "38ac8815efd34f98aeb4ab72cddc74e0"
   },
   {
     "url": "favicon.ico",
@@ -64,7 +64,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b21a825e69a1cc2b89adc14b57a7207b"
+    "revision": "b61ec0f9abc4cb94166ce891f5251daa"
   },
   {
     "url": "manifest.json",

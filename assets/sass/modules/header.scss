@@ -1,6 +1,20 @@
 .navbar {
   .navbar-header {
     padding-left: 24px;
+    @include small-phone {
+      min-height: 60px;
+      padding-left: 12px;
+    }
+    @include tablet-min {
+      padding-left: 48px;
+    }
+  }
+  #search {
+    cursor: pointer;
+  }
+  .search {
+    color: $white;
+    font-size: 24px;
   }
   .navbar-title {
     font-family: $primary-font;

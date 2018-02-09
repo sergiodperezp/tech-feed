@@ -1,7 +1,7 @@
 "use strict";
 
 var sources = [{ "name": "Ars Technica", "source": "ars-technica" }, { "name": "Engadget", "source": "engadget" }, { "name": "Hacker News", "source": "hacker-news" }, { "name": "Mashable", "source": "mashable" }, { "name": "Recode", "source": "recode" }, { "name": "TechCrunch", "source": "techcrunch" }, { "name": "TechRadar", "source": "techradar" }, { "name": "The Next Web", "source": "the-next-web" }, { "name": "The Verge", "source": "the-verge" }, { "name": "Wired", "source": "wired" }];
-var techFeed = document.querySelector('.tech-feed');
+var feedCards = document.querySelector('.feed-cards');
 
 var card = '';
 
@@ -25,16 +25,27 @@ for (var i in sources) {
       var sourceName = articles[j].source.name;
       var date = articles[j].publishedAt;
 
-      card += "\n        <a href=\"" + url + "\" target=\"_blank\" class=\"card\">\n          <div class=\"card-inner\">\n      ";
+      card += "\n        <div class=\"feed-card\">\n          <a href=\"" + url + "\" target=\"_blank\" class=\"card-inner\">\n      ";
       if (image) {
-        card += "\n          <img src=\"" + image + "\" alt=\"" + title + "\">\n        ";
+        card += "\n          <img src=\"" + image + "\" alt=\"" + title + "\" class=\"image\">\n        ";
       }
       card += "\n        <h2 class=\"title\">" + title + "</h2>\n      ";
       if (description) {
         card += "\n          <p class=\"description\">" + description + "</p>\n        ";
       }
-      card += "\n            <p class=\"source-name\">" + sourceName + "</p>\n          </div>\n        </a>\n      ";
+      card += "\n            <p class=\"source-name\">" + sourceName + "</p>\n          </a>\n        </div>\n      ";
     }
-    techFeed.innerHTML = card;
+    feedCards.innerHTML = card;
   });
 }
+
+// to the top
+var toTop = document.querySelector('#to-top');
+
+window.addEventListener('scroll', function () {
+  if (window.pageYOffset > 1000) {
+    toTop.classList.remove('hidden');
+  } else {
+    toTop.classList.add('hidden');
+  }
+});

@@ -1,47 +1,111 @@
+@media screen and (max-width: 374px) {
+  .container {
+    padding: 0 24px; } }
+
+@media screen and (max-width: 374px) {
+  .row {
+    margin: 0 -24px; } }
+
+@media screen and (max-width: 374px) {
+  .page {
+    padding: 72px 0; } }
+
 .content {
   padding: 0 24px; }
 
 .navbar .navbar-header {
   padding-left: 24px; }
+  @media screen and (max-width: 374px) {
+    .navbar .navbar-header {
+      min-height: 60px;
+      padding-left: 12px; } }
+  @media screen and (min-width: 768px) {
+    .navbar .navbar-header {
+      padding-left: 48px; } }
+
+.navbar #search {
+  cursor: pointer; }
+
+.navbar .search {
+  color: #fff;
+  font-size: 24px; }
 
 .navbar .navbar-title {
   font-family: "Montserrat", sans-serif; }
 
-.tech-feed {
+.feed-cards {
   display: grid;
-  grid-row-gap: 24px; }
+  grid-template-columns: 100%;
+  grid-row-gap: 48px; }
+  @media screen and (max-width: 374px) {
+    .feed-cards {
+      grid-row-gap: 24px; } }
   @media screen and (min-width: 768px) {
-    .tech-feed {
+    .feed-cards {
       grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 48px;
-      grid-row-gap: 48px; } }
+      grid-column-gap: 24px; } }
   @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .tech-feed {
+    .feed-cards {
       grid-template-columns: repeat(3, 1fr); } }
   @media screen and (min-width: 1200px) {
-    .tech-feed {
+    .feed-cards {
       grid-template-columns: repeat(4, 1fr); } }
 
-.card {
-  display: block; }
-  .card .card-inner {
+.feed-card {
+  border: 1px solid #d0d0d0; }
+  .feed-card .card-inner {
     position: relative;
+    display: block;
+    height: 100%;
     padding: 12px 12px 34px 12px;
     text-align: center; }
-    .card .card-inner .title {
+    .feed-card .card-inner .image {
+      max-width: 250px;
+      padding: 0 0 12px 0; }
+      @media screen and (max-width: 374px) {
+        .feed-card .card-inner .image {
+          max-width: 200px; } }
+      @media screen and (min-width: 768px) {
+        .feed-card .card-inner .image {
+          max-width: 250px; } }
+      @media screen and (min-width: 992px) {
+        .feed-card .card-inner .image {
+          max-width: 200px; } }
+    .feed-card .card-inner .title {
       color: #404040;
       font-family: "Montserrat", sans-serif;
       font-size: 20px;
       padding: 0 0 6px 0; }
-    .card .card-inner .description {
+    .feed-card .card-inner .description {
       color: #808080;
       font-family: "Lato", sans-serif;
       font-weight: 300;
       padding: 0 0 6px 0; }
-    .card .card-inner .source-name {
+    .feed-card .card-inner .source-name {
       position: absolute;
       bottom: 12px;
       right: 12px;
       color: #808080;
       font-family: "Montserrat", sans-serif;
       font-size: 16px; }
+
+#to-top {
+  position: fixed;
+  bottom: 6px;
+  width: 100%; }
+  #to-top .to-top {
+    display: flex;
+    justify-content: center; }
+    #to-top .to-top .fas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 50%;
+      color: #326edc;
+      font-size: 24px;
+      height: 48px;
+      width: 48px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
+      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28);
+      -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.28); }

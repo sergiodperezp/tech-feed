@@ -1,3 +1,18 @@
+.container {
+  @include small-phone {
+    padding: 0 24px;
+  }
+}
+.row {
+  @include small-phone {
+    margin: 0 -24px;
+  }
+}
+.page {
+  @include small-phone {
+    padding: 72px 0;
+  }
+}
 .content {
   padding: 0 24px;
 }

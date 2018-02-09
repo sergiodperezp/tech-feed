@@ -1,10 +1,13 @@
-.tech-feed {
+.feed-cards {
   display: grid;
-  grid-row-gap: 24px;
+  grid-template-columns: 100%;
+  grid-row-gap: 48px;
+  @include small-phone {
+    grid-row-gap: 24px;
+  }
   @include tablet-min {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 48px;
-    grid-row-gap: 48px;
+    grid-column-gap: 24px;
   }
   @include laptop {
     grid-template-columns: repeat(3, 1fr);
@@ -13,12 +16,27 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.card {
-  display: block;
+.feed-card {
+  border: 1px solid $gray-lighter;
   .card-inner {
     position: relative;
+    display: block;
+    height: 100%;
     padding: 12px 12px 34px 12px;
     text-align: center;
+    .image {
+      max-width: 250px;
+      padding: 0 0 12px 0;
+      @include small-phone {
+        max-width: 200px;
+      }
+      @include tablet-min {
+        max-width: 250px;
+      }
+      @include laptop-min {
+        max-width: 200px;
+      }
+    }
     .title {
       color: $gray;
       font-family: $primary-font;
@@ -38,6 +56,27 @@
       color: $gray-light;
       font-family: $primary-font;
       font-size: 16px;
+    }
+  }
+}
+#to-top {
+  position: fixed;
+  bottom: 6px;
+  width: 100%;
+  .to-top {
+    display: flex;
+    justify-content: center;
+    .fas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      border-radius: 50%;
+      color: $primary-color;
+      font-size: 24px;
+      height: 48px;
+      width: 48px;
+      @include box-shadow-bottom();
     }
   }
 }
